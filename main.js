@@ -1,7 +1,4 @@
 const container = document.querySelector('.container')
-const divs = Array.from(document.querySelectorAll('.container div'))
-const images = Array.from(document.querySelectorAll('.container div img'))
-const titles = Array.from(document.querySelectorAll('.container div h1'))
 const searchForm = document.getElementById('searchForm')
 const noImg =
   'https://cdn-5fcbf5c4c1ac1a221c18568d.closte.com/wp-content/themes/ryse/assets/images/no-image/No-Image-Found-400x264.png'
