@@ -30,7 +30,8 @@ const init = async () => {
   await fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      data.slice(0, 8).forEach((dat) => {
+      let rnd = Math.floor(Math.random() * data.length)
+      data.slice(rnd, (rnd += 8)).forEach((dat) => {
         const initData = new MakeDiv()
         initData.div(dat.image, dat.name)
       })
@@ -52,7 +53,11 @@ async function search(e) {
   await fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      data.slice(0, 8).map((dat) => {
+      // data.slice(0, 8).map((dat) => {
+      //   const searchData = new MakeDiv()
+      //   searchData.div(dat.show.image, dat.show.name)
+      // })
+      data.slice(0, data.length).map((dat) => {
         const searchData = new MakeDiv()
         searchData.div(dat.show.image, dat.show.name)
       })
